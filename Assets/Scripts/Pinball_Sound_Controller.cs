@@ -8,30 +8,26 @@ using MidiJack;
 // http://slides.com/robinbaumgarten/arduino-unity3d#/0/16
 // https://github.com/charlottepierce/UnityMidiControl
 // http://malformedbits.com/2015/03/05/Unity-MIDI-Control.html
-// http://malformedbits.com/2015/03/05/Unity-MIDI-Control.html
 
 public class Pinball_Sound_Controller : MonoBehaviour {
 
+	// http://docs.unity3d.com/ScriptReference/AudioSource.html
+	// Change audio sources, not the global audio listener!
 	AudioSource[] audios;
+	AudioSource audio;
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log (gameObject.name);
-		Debug.Log (this);
 		// http://answers.unity3d.com/questions/984213/control-audio-volume-of-multiple-audio-sources-on.html
 		// http://answers.unity3d.com/questions/306684/how-to-change-volume-on-many-audio-objects-with-sp.html
 		audios = GetComponents<AudioSource>();
+		audio = audios [0];
 		// Assume every audio source has one element.
-		Debug.Log (audios[0]);
 	}
 
+	int keyCount = 128;
 	// Update is called once per frame
 	void Update () {
-		/*
-		for (int key = 0; key < 127; key++) {
-		// TODO
-		}
-		*/
 		/*
 		// http://docs.unity3d.com/ScriptReference/AudioListener-volume.html
 			if (MidiMaster.GetKeyUp (48)) {
@@ -48,25 +44,64 @@ public class Pinball_Sound_Controller : MonoBehaviour {
 				AudioListener.volume = 1F;
 			}
 			*/
+		// There are two ways of getting a MIDI input via MidiJack:
+		// The first is a simple on-off switch.
+		/*
+		for (int key = 0; key < keyCount; key++) {
+			if (key % 2 == 0)
+			{
+				if (MidiMaster.GetKeyUp(key))
+					increaseVolume();
+			}
+			else // if key % 2 == 1
+			{
+				if (MidiMaster.GetKeyUp(key))
+					decreaseVolume(); 
+			}
 
-		if (MidiMaster.GetKeyUp (48)) {
-			increaseVolume();
-		} else if (MidiMaster.GetKeyUp (49)) {
-			decreaseVolume();
 		}
+		*/
+		// The second is a continuous hold.
+
+		for (int key = 0; key < keyCount; key++) {
+			if (key % 2 == 0)
+			{
+				if (MidiMaster.GetKey(key) > 0)
+					increaseVolume();
+			}
+			else // if key % 2 == 1
+			{
+				if (MidiMaster.GetKey(key) > 0)
+					decreaseVolume(); 
+			}	
+		}
+		/**/
 	}
 
+	void changeVolume(float amount)
+	{
+		Debug.Log ("Changing volume:");
+		float currentVolume = audio.volume;
+		float newVolume = currentVolume + amount;
+		if (newVolume > 1F) {
+			newVolume = 1F;
+		} else if (newVolume < 0F) {
+			newVolume = 0F;
+		}
+		audio.volume = newVolume;
+	}
+
+	float increaseAmount = 0.02F;
 	void increaseVolume()
 	{
 		Debug.Log ("Increase volume.");
-		float increaseAmount = 0.2F;
-		audios[0].volume = audios[0].volume + increaseAmount;
+		changeVolume (increaseAmount);
 	}
 
+	float decreaseAmount = 0.01F;
 	void decreaseVolume()
 	{
 		Debug.Log ("Decrease volume.");
-		float decreaseAmount = 0.1F;
-		audios [0].volume = audios [0].volume - decreaseAmount;
+		changeVolume (-decreaseAmount);
 	}
 }
