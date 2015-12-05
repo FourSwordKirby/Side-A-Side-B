@@ -24,10 +24,17 @@ public class FlipperController : MonoBehaviour {
 	void Update () {
 		pullBackMagnitude = Controls.getFlipperMagnitude ();
 		//if (pullBackMagnitude != 0) Debug.Log (pullBackMagnitude);
-
 		PullBack ();
 
+    /*
         //Code that might be used later for accelerometers
-        //transform.Translate(Input.acceleration.x, 0, -Input.acceleration.z);
-	}
+        transform.Translate(Input.acceleration.x, 0, -Input.acceleration.z);
+     */
+    }
+
+    void OnGUI()
+    {
+        GUILayout.Label("X: " + Input.acceleration.x);
+        GUILayout.Label("Y: " + Input.acceleration.y); 	
+    }
 }
