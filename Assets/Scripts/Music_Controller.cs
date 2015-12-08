@@ -4,7 +4,7 @@ using MidiJack;
 
 public class Music_Controller : MonoBehaviour {
 
-	AudioSource[] instruments;
+	public AudioSource[] instruments;
 	int instrumentCount = 0; // Will be modifed on start.
 	int keyCount = 128;
 
@@ -86,14 +86,14 @@ public class Music_Controller : MonoBehaviour {
 	}
 	
 	float increaseAmount = 0.08F;
-	void increaseVolume(AudioSource audio)
+	public void increaseVolume(AudioSource audio)
 	{
 		changeVolume (audio, increaseAmount);
 		//		Debug.Log ("Increasing " + audio);
 	}
 	
 	float decreaseAmount = 0.005F;
-	void decreaseVolume(AudioSource audio)
+	public void decreaseVolume(AudioSource audio)
 	{
 		changeVolume (audio, -decreaseAmount);
 		//		Debug.Log ("Decreasing " + audio);
