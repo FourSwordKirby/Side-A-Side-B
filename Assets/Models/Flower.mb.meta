@@ -1,0 +1,164 @@
+fileFormatVersion: 2
+guid: 98ce7b9b97d0065439a99bf2a020f070
+timeCreated: 1449611896
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Flower_Center
+    100004: Petal_1
+    100006: Petal_2
+    100008: Petal_3
+    100010: Petal_4
+    100012: Petal_5
+    100014: Petal_6
+    100016: Petal_7
+    100018: Flower_Center_Smooth
+    100020: Petal_1 1
+    100022: Petal_2 1
+    100024: Petal_3 1
+    100026: Petal_4 1
+    100028: Petal_5 1
+    100030: Petal_6 1
+    100032: Petal_7 1
+    100034: Petal_8
+    100036: Petal_8 1
+    400000: //RootNode
+    400002: Flower_Center
+    400004: Petal_1
+    400006: Petal_2
+    400008: Petal_3
+    400010: Petal_4
+    400012: Petal_5
+    400014: Petal_6
+    400016: Petal_7
+    400018: Flower_Center_Smooth
+    400020: Petal_1 1
+    400022: Petal_2 1
+    400024: Petal_3 1
+    400026: Petal_4 1
+    400028: Petal_5 1
+    400030: Petal_6 1
+    400032: Petal_7 1
+    400034: Petal_8
+    400036: Petal_8 1
+    2300000: Flower_Center
+    2300002: Petal_1
+    2300004: Petal_2
+    2300006: Petal_3
+    2300008: Petal_4
+    2300010: Petal_5
+    2300012: Petal_6
+    2300014: Petal_7
+    2300016: Flower_Center_Smooth
+    2300018: Petal_1 1
+    2300020: Petal_2 1
+    2300022: Petal_3 1
+    2300024: Petal_4 1
+    2300026: Petal_5 1
+    2300028: Petal_6 1
+    2300030: Petal_7 1
+    2300032: Petal_8
+    2300034: Petal_8 1
+    3300000: Flower_Center
+    3300002: Petal_1
+    3300004: Petal_2
+    3300006: Petal_3
+    3300008: Petal_4
+    3300010: Petal_5
+    3300012: Petal_6
+    3300014: Petal_7
+    3300016: Flower_Center_Smooth
+    3300018: Petal_1 1
+    3300020: Petal_2 1
+    3300022: Petal_3 1
+    3300024: Petal_4 1
+    3300026: Petal_5 1
+    3300028: Petal_6 1
+    3300030: Petal_7 1
+    3300032: Petal_8
+    3300034: Petal_8 1
+    4300000: Flower_Center
+    4300002: Petal_1
+    4300004: Petal_2
+    4300006: Petal_3
+    4300008: Petal_4
+    4300010: Petal_5
+    4300012: Petal_6
+    4300014: Petal_7
+    4300016: Petal_8
+    4300018: Flower_Center_Smooth
+    4300020: Petal_1
+    4300022: Petal_2
+    4300024: Petal_3
+    4300026: Petal_4
+    4300028: Petal_5
+    4300030: Petal_6
+    4300032: Petal_7
+    4300034: Petal_8
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
