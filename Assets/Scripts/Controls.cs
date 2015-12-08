@@ -3,10 +3,9 @@ using System.Collections;
 
 public class Controls {
 
-    public static float getFlipperMagnitude()
+    public static float getFlipperMagnitude(int player)
     {
-        float flipperMagnitude = Input.GetAxis("Vertical");
-        return flipperMagnitude;
+        return Input.GetAxis("P"+(player+1)+"_Vertical");
     }
 
     public static bool interactInputDown()
@@ -22,5 +21,8 @@ public class Controls {
     public static bool attackInputDown()
     {
         return Input.GetMouseButtonDown(1);
+    }
+
+    void Awake() {
     }
 }

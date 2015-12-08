@@ -15,14 +15,14 @@ public class Sound_Controller_Example: MonoBehaviour {
 	// http://docs.unity3d.com/ScriptReference/AudioSource.html
 	// Change audio sources, not the global audio listener!
 	AudioSource[] audios;
-	AudioSource audio;
+	AudioSource primaryAudio;
 
 	// Use this for initialization
 	void Start () {
 		// http://answers.unity3d.com/questions/984213/control-audio-volume-of-multiple-audio-sources-on.html
 		// http://answers.unity3d.com/questions/306684/how-to-change-volume-on-many-audio-objects-with-sp.html
 		audios = GetComponents<AudioSource>();
-		audio = audios [0];
+		primaryAudio = audios [0];
 		// Assume every audio source has one element.
 	}
 
@@ -81,28 +81,28 @@ public class Sound_Controller_Example: MonoBehaviour {
 
 	void changeVolume(float amount)
 	{
-		Debug.Log ("Changing volume.");
-		float currentVolume = audio.volume;
+		//Debug.Log ("Changing volume.");
+		float currentVolume = primaryAudio.volume;
 		float newVolume = currentVolume + amount;
 		if (newVolume > 1F) {
 			newVolume = 1F;
 		} else if (newVolume < 0F) {
 			newVolume = 0F;
 		}
-		audio.volume = newVolume;
+		primaryAudio.volume = newVolume;
 	}
 
 	float increaseAmount = 0.02F;
 	void increaseVolume()
 	{
-		Debug.Log ("Increase volume.");
+		//Debug.Log ("Increase volume.");
 		changeVolume (increaseAmount);
 	}
 
 	float decreaseAmount = 0.01F;
 	void decreaseVolume()
 	{
-		Debug.Log ("Decrease volume.");
+		//Debug.Log ("Decrease volume.");
 		changeVolume (-decreaseAmount);
 	}
 }

@@ -4,6 +4,7 @@ using System.Collections;
 public class FlipperController : MonoBehaviour {
 
     public float pullBackMagnitude;
+    public int player;
 
 	private Quaternion baseState;
 
@@ -22,7 +23,7 @@ public class FlipperController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		pullBackMagnitude = Controls.getFlipperMagnitude ();
+		pullBackMagnitude = Controls.getFlipperMagnitude (player);
 		//if (pullBackMagnitude != 0) Debug.Log (pullBackMagnitude);
 		PullBack ();
 

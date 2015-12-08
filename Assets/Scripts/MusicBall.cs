@@ -16,7 +16,7 @@ public class MusicBall : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log(col.gameObject.name);
+        //Debug.Log(col.gameObject.name);
         if (col.gameObject.name == "temp" || col.gameObject.name == "Pinball")
         {
             Music_Controller musicSource = GameObject.FindObjectOfType<Music_Controller>();
