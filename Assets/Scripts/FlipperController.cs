@@ -23,11 +23,23 @@ public class FlipperController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		pullBackMagnitude = Controls.getFlipperMagnitude (player);
-		//if (pullBackMagnitude != 0) Debug.Log (pullBackMagnitude);
-		PullBack ();
+        //Being revised to do stuff with HingeJointss
+        //Guide is here: http://forum.unity3d.com/threads/pinball-flippers-swatting-objects-using-physics.220281/
 
-    /*
+        if (Mathf.Abs(pullBackMagnitude) <= Mathf.Abs(Controls.getFlipperMagnitude(player)))
+        {
+            //Initially pulls back /forward the flipper
+            pullBackMagnitude = Controls.getFlipperMagnitude(player);
+            PullBack();
+        }
+        else
+        {
+            pullBackMagnitude = 0;
+            Debug.Log("here");
+            this.GetComponent<Rigidbody>().angularVelocity += new Vector3(0, pullBackMagnitude, 0);
+        }
+
+     /*
         //Code that might be used later for accelerometers
         transform.Translate(Input.acceleration.x, 0, -Input.acceleration.z);
      */
