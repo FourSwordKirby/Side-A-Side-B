@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: 161e01eb60d156d4188f04112df6f6dc
+timeCreated: 1449757657
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Flower_Center
+    100004: Flower_Center_Petal_1
+    100006: Flower_Center_Petal_2
+    100008: Flower_Center_Petal_3
+    100010: Flower_Center_Petal_4
+    100012: Flower_Center_Petal_5
+    100014: Flower_Center_Petal_6
+    100016: Flower_Center_Petal_7
+    100018: Flower_Center_Petal_8
+    100020: Flower_Center_Smooth
+    100022: Flower_Center_Smooth_Petal_1
+    100024: Flower_Center_Smooth_Petal_2
+    100026: Flower_Center_Smooth_Petal_3
+    100028: Flower_Center_Smooth_Petal_4
+    100030: Flower_Center_Smooth_Petal_5
+    100032: Flower_Center_Smooth_Petal_6
+    100034: Flower_Center_Smooth_Petal_7
+    100036: Flower_Center_Smooth_Petal_8
+    400000: //RootNode
+    400002: Flower_Center
+    400004: Flower_Center_Petal_1
+    400006: Flower_Center_Petal_2
+    400008: Flower_Center_Petal_3
+    400010: Flower_Center_Petal_4
+    400012: Flower_Center_Petal_5
+    400014: Flower_Center_Petal_6
+    400016: Flower_Center_Petal_7
+    400018: Flower_Center_Petal_8
+    400020: Flower_Center_Smooth
+    400022: Flower_Center_Smooth_Petal_1
+    400024: Flower_Center_Smooth_Petal_2
+    400026: Flower_Center_Smooth_Petal_3
+    400028: Flower_Center_Smooth_Petal_4
+    400030: Flower_Center_Smooth_Petal_5
+    400032: Flower_Center_Smooth_Petal_6
+    400034: Flower_Center_Smooth_Petal_7
+    400036: Flower_Center_Smooth_Petal_8
+    2300000: Flower_Center
+    2300002: Flower_Center_Petal_1
+    2300004: Flower_Center_Petal_2
+    2300006: Flower_Center_Petal_3
+    2300008: Flower_Center_Petal_4
+    2300010: Flower_Center_Petal_5
+    2300012: Flower_Center_Petal_6
+    2300014: Flower_Center_Petal_7
+    2300016: Flower_Center_Petal_8
+    2300018: Flower_Center_Smooth
+    2300020: Flower_Center_Smooth_Petal_1
+    2300022: Flower_Center_Smooth_Petal_2
+    2300024: Flower_Center_Smooth_Petal_3
+    2300026: Flower_Center_Smooth_Petal_4
+    2300028: Flower_Center_Smooth_Petal_5
+    2300030: Flower_Center_Smooth_Petal_6
+    2300032: Flower_Center_Smooth_Petal_7
+    2300034: Flower_Center_Smooth_Petal_8
+    3300000: Flower_Center
+    3300002: Flower_Center_Petal_1
+    3300004: Flower_Center_Petal_2
+    3300006: Flower_Center_Petal_3
+    3300008: Flower_Center_Petal_4
+    3300010: Flower_Center_Petal_5
+    3300012: Flower_Center_Petal_6
+    3300014: Flower_Center_Petal_7
+    3300016: Flower_Center_Petal_8
+    3300018: Flower_Center_Smooth
+    3300020: Flower_Center_Smooth_Petal_1
+    3300022: Flower_Center_Smooth_Petal_2
+    3300024: Flower_Center_Smooth_Petal_3
+    3300026: Flower_Center_Smooth_Petal_4
+    3300028: Flower_Center_Smooth_Petal_5
+    3300030: Flower_Center_Smooth_Petal_6
+    3300032: Flower_Center_Smooth_Petal_7
+    3300034: Flower_Center_Smooth_Petal_8
+    4300000: Flower_Center
+    4300002: Flower_Center_Petal_1
+    4300004: Flower_Center_Petal_2
+    4300006: Flower_Center_Petal_3
+    4300008: Flower_Center_Petal_4
+    4300010: Flower_Center_Petal_5
+    4300012: Flower_Center_Petal_6
+    4300014: Flower_Center_Petal_7
+    4300016: Flower_Center_Petal_8
+    4300018: Flower_Center_Smooth
+    4300020: Flower_Center_Smooth_Petal_1
+    4300022: Flower_Center_Smooth_Petal_2
+    4300024: Flower_Center_Smooth_Petal_3
+    4300026: Flower_Center_Smooth_Petal_4
+    4300028: Flower_Center_Smooth_Petal_5
+    4300030: Flower_Center_Smooth_Petal_6
+    4300032: Flower_Center_Smooth_Petal_7
+    4300034: Flower_Center_Smooth_Petal_8
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
