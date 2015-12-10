@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: 1011a73d0cbf22646abe48c377fd198c
+timeCreated: 1449775561
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Railing_Parts1_Pillar
+    100002: Railing_Parts1_Railing_Bottom
+    100004: Railing_Parts2_Pillar
+    100006: Railing_Parts2_Railing_Bottom
+    100008: Railing_Parts3_Pillar
+    100010: Railing_Parts3_Railing_Bottom
+    100012: Railing_Parts4_Pillar
+    100014: Railing_Parts4_Railing_Bottom
+    100016: Railing_Parts_Pillar
+    100018: Railing_Parts_Railing_Bottom
+    100020: Railing_Top_Railing_Parts
+    100022: Railing_Top_Railing_Parts1
+    100024: Railing_Top_Railing_Parts2
+    100026: Railing_Top_Railing_Parts3
+    100028: Railing_Top_Railing_Parts4
+    100030: //RootNode
+    100032: Table
+    400000: Railing_Parts1_Pillar
+    400002: Railing_Parts1_Railing_Bottom
+    400004: Railing_Parts2_Pillar
+    400006: Railing_Parts2_Railing_Bottom
+    400008: Railing_Parts3_Pillar
+    400010: Railing_Parts3_Railing_Bottom
+    400012: Railing_Parts4_Pillar
+    400014: Railing_Parts4_Railing_Bottom
+    400016: Railing_Parts_Pillar
+    400018: Railing_Parts_Railing_Bottom
+    400020: Railing_Top_Railing_Parts
+    400022: Railing_Top_Railing_Parts1
+    400024: Railing_Top_Railing_Parts2
+    400026: Railing_Top_Railing_Parts3
+    400028: Railing_Top_Railing_Parts4
+    400030: Table
+    400032: //RootNode
+    2300000: Railing_Parts1_Pillar
+    2300002: Railing_Parts1_Railing_Bottom
+    2300004: Railing_Parts2_Pillar
+    2300006: Railing_Parts2_Railing_Bottom
+    2300008: Railing_Parts3_Pillar
+    2300010: Railing_Parts3_Railing_Bottom
+    2300012: Railing_Parts4_Pillar
+    2300014: Railing_Parts4_Railing_Bottom
+    2300016: Railing_Parts_Pillar
+    2300018: Railing_Parts_Railing_Bottom
+    2300020: Railing_Top_Railing_Parts
+    2300022: Railing_Top_Railing_Parts1
+    2300024: Railing_Top_Railing_Parts2
+    2300026: Railing_Top_Railing_Parts3
+    2300028: Railing_Top_Railing_Parts4
+    2300030: Table
+    3300000: Railing_Parts1_Pillar
+    3300002: Railing_Parts1_Railing_Bottom
+    3300004: Railing_Parts2_Pillar
+    3300006: Railing_Parts2_Railing_Bottom
+    3300008: Railing_Parts3_Pillar
+    3300010: Railing_Parts3_Railing_Bottom
+    3300012: Railing_Parts4_Pillar
+    3300014: Railing_Parts4_Railing_Bottom
+    3300016: Railing_Parts_Pillar
+    3300018: Railing_Parts_Railing_Bottom
+    3300020: Railing_Top_Railing_Parts
+    3300022: Railing_Top_Railing_Parts1
+    3300024: Railing_Top_Railing_Parts2
+    3300026: Railing_Top_Railing_Parts3
+    3300028: Railing_Top_Railing_Parts4
+    3300030: Table
+    4300000: Railing_Parts1_Pillar
+    4300002: Railing_Parts1_Railing_Bottom
+    4300004: Railing_Parts2_Pillar
+    4300006: Railing_Parts2_Railing_Bottom
+    4300008: Railing_Parts3_Pillar
+    4300010: Railing_Parts3_Railing_Bottom
+    4300012: Railing_Parts4_Pillar
+    4300014: Railing_Parts4_Railing_Bottom
+    4300016: Railing_Parts_Pillar
+    4300018: Railing_Parts_Railing_Bottom
+    4300020: Railing_Top_Railing_Parts
+    4300022: Railing_Top_Railing_Parts1
+    4300024: Railing_Top_Railing_Parts2
+    4300026: Railing_Top_Railing_Parts3
+    4300028: Railing_Top_Railing_Parts4
+    4300030: Table
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

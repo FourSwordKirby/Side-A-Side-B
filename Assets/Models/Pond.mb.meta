@@ -1,0 +1,497 @@
+fileFormatVersion: 2
+guid: 805459c0c58465743b9b758770b5d13c
+timeCreated: 1449775563
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Flower
+    100002: Flower_Arranged
+    100004: Flower_Arranged1
+    100006: Flower_Arranged2
+    100008: Flower_Arranged3
+    100010: Flower_Arranged4
+    100012: Grass
+    100014: Leaf
+    100016: Leaf 1
+    100018: Leaf 2
+    100020: Leaf 3
+    100022: Leaf 4
+    100024: Leaf 5
+    100026: Leaf1
+    100028: Leaf1 1
+    100030: Leaf1 2
+    100032: Leaf1 3
+    100034: Leaf1 4
+    100036: Leaf1 5
+    100038: Leaf2
+    100040: Leaf2 1
+    100042: Leaf2 2
+    100044: Leaf2 3
+    100046: Leaf2 4
+    100048: Leaf2 5
+    100050: Leaf3
+    100052: Leaf3 1
+    100054: Leaf3 2
+    100056: Leaf3 3
+    100058: Leaf3 4
+    100060: Leaf3 5
+    100062: Leaf_Curved
+    100064: Leaf_Curved 1
+    100066: Leaf_Curved 10
+    100068: Leaf_Curved 11
+    100070: Leaf_Curved 2
+    100072: Leaf_Curved 3
+    100074: Leaf_Curved 4
+    100076: Leaf_Curved 5
+    100078: Leaf_Curved 6
+    100080: Leaf_Curved 7
+    100082: Leaf_Curved 8
+    100084: Leaf_Curved 9
+    100086: Leaf_Curved1
+    100088: Leaf_Curved1 1
+    100090: Leaf_Curved1 10
+    100092: Leaf_Curved1 11
+    100094: Leaf_Curved1 2
+    100096: Leaf_Curved1 3
+    100098: Leaf_Curved1 4
+    100100: Leaf_Curved1 5
+    100102: Leaf_Curved1 6
+    100104: Leaf_Curved1 7
+    100106: Leaf_Curved1 8
+    100108: Leaf_Curved1 9
+    100110: Leaf_Curved2
+    100112: Leaf_Curved2 1
+    100114: Leaf_Curved2 10
+    100116: Leaf_Curved2 11
+    100118: Leaf_Curved2 2
+    100120: Leaf_Curved2 3
+    100122: Leaf_Curved2 4
+    100124: Leaf_Curved2 5
+    100126: Leaf_Curved2 6
+    100128: Leaf_Curved2 7
+    100130: Leaf_Curved2 8
+    100132: Leaf_Curved2 9
+    100134: Leaf_Curved3
+    100136: Leaf_Curved3 1
+    100138: Leaf_Curved3 10
+    100140: Leaf_Curved3 11
+    100142: Leaf_Curved3 2
+    100144: Leaf_Curved3 3
+    100146: Leaf_Curved3 4
+    100148: Leaf_Curved3 5
+    100150: Leaf_Curved3 6
+    100152: Leaf_Curved3 7
+    100154: Leaf_Curved3 8
+    100156: Leaf_Curved3 9
+    100158: Leaves
+    100160: Leaves 1
+    100162: Leaves 2
+    100164: Leaves 3
+    100166: Leaves 4
+    100168: Leaves 5
+    100170: Petals
+    100172: Petals 1
+    100174: Petals 2
+    100176: Petals 3
+    100178: Petals 4
+    100180: Petals 5
+    100182: Petals_Inner
+    100184: Petals_Inner 1
+    100186: Petals_Inner 2
+    100188: Petals_Inner 3
+    100190: Petals_Inner 4
+    100192: Petals_Inner 5
+    100194: Pond
+    100196: //RootNode
+    100198: Pond_Smooth
+    400000: Flower
+    400002: Flower_Arranged
+    400004: Flower_Arranged1
+    400006: Flower_Arranged2
+    400008: Flower_Arranged3
+    400010: Flower_Arranged4
+    400012: Grass
+    400014: Leaf
+    400016: Leaf 1
+    400018: Leaf 2
+    400020: Leaf 3
+    400022: Leaf 4
+    400024: Leaf 5
+    400026: Leaf1
+    400028: Leaf1 1
+    400030: Leaf1 2
+    400032: Leaf1 3
+    400034: Leaf1 4
+    400036: Leaf1 5
+    400038: Leaf2
+    400040: Leaf2 1
+    400042: Leaf2 2
+    400044: Leaf2 3
+    400046: Leaf2 4
+    400048: Leaf2 5
+    400050: Leaf3
+    400052: Leaf3 1
+    400054: Leaf3 2
+    400056: Leaf3 3
+    400058: Leaf3 4
+    400060: Leaf3 5
+    400062: Leaf_Curved
+    400064: Leaf_Curved 1
+    400066: Leaf_Curved 10
+    400068: Leaf_Curved 11
+    400070: Leaf_Curved 2
+    400072: Leaf_Curved 3
+    400074: Leaf_Curved 4
+    400076: Leaf_Curved 5
+    400078: Leaf_Curved 6
+    400080: Leaf_Curved 7
+    400082: Leaf_Curved 8
+    400084: Leaf_Curved 9
+    400086: Leaf_Curved1
+    400088: Leaf_Curved1 1
+    400090: Leaf_Curved1 10
+    400092: Leaf_Curved1 11
+    400094: Leaf_Curved1 2
+    400096: Leaf_Curved1 3
+    400098: Leaf_Curved1 4
+    400100: Leaf_Curved1 5
+    400102: Leaf_Curved1 6
+    400104: Leaf_Curved1 7
+    400106: Leaf_Curved1 8
+    400108: Leaf_Curved1 9
+    400110: Leaf_Curved2
+    400112: Leaf_Curved2 1
+    400114: Leaf_Curved2 10
+    400116: Leaf_Curved2 11
+    400118: Leaf_Curved2 2
+    400120: Leaf_Curved2 3
+    400122: Leaf_Curved2 4
+    400124: Leaf_Curved2 5
+    400126: Leaf_Curved2 6
+    400128: Leaf_Curved2 7
+    400130: Leaf_Curved2 8
+    400132: Leaf_Curved2 9
+    400134: Leaf_Curved3
+    400136: Leaf_Curved3 1
+    400138: Leaf_Curved3 10
+    400140: Leaf_Curved3 11
+    400142: Leaf_Curved3 2
+    400144: Leaf_Curved3 3
+    400146: Leaf_Curved3 4
+    400148: Leaf_Curved3 5
+    400150: Leaf_Curved3 6
+    400152: Leaf_Curved3 7
+    400154: Leaf_Curved3 8
+    400156: Leaf_Curved3 9
+    400158: Leaves
+    400160: Leaves 1
+    400162: Leaves 2
+    400164: Leaves 3
+    400166: Leaves 4
+    400168: Leaves 5
+    400170: Petals
+    400172: Petals 1
+    400174: Petals 2
+    400176: Petals 3
+    400178: Petals 4
+    400180: Petals 5
+    400182: Petals_Inner
+    400184: Petals_Inner 1
+    400186: Petals_Inner 2
+    400188: Petals_Inner 3
+    400190: Petals_Inner 4
+    400192: Petals_Inner 5
+    400194: Pond
+    400196: //RootNode
+    400198: Pond_Smooth
+    2300000: Grass
+    2300002: Leaf
+    2300004: Leaf 1
+    2300006: Leaf 2
+    2300008: Leaf 3
+    2300010: Leaf 4
+    2300012: Leaf 5
+    2300014: Leaf1
+    2300016: Leaf1 1
+    2300018: Leaf1 2
+    2300020: Leaf1 3
+    2300022: Leaf1 4
+    2300024: Leaf1 5
+    2300026: Leaf2
+    2300028: Leaf2 1
+    2300030: Leaf2 2
+    2300032: Leaf2 3
+    2300034: Leaf2 4
+    2300036: Leaf2 5
+    2300038: Leaf3
+    2300040: Leaf3 1
+    2300042: Leaf3 2
+    2300044: Leaf3 3
+    2300046: Leaf3 4
+    2300048: Leaf3 5
+    2300050: Leaf_Curved
+    2300052: Leaf_Curved 1
+    2300054: Leaf_Curved 10
+    2300056: Leaf_Curved 11
+    2300058: Leaf_Curved 2
+    2300060: Leaf_Curved 3
+    2300062: Leaf_Curved 4
+    2300064: Leaf_Curved 5
+    2300066: Leaf_Curved 6
+    2300068: Leaf_Curved 7
+    2300070: Leaf_Curved 8
+    2300072: Leaf_Curved 9
+    2300074: Leaf_Curved1
+    2300076: Leaf_Curved1 1
+    2300078: Leaf_Curved1 10
+    2300080: Leaf_Curved1 11
+    2300082: Leaf_Curved1 2
+    2300084: Leaf_Curved1 3
+    2300086: Leaf_Curved1 4
+    2300088: Leaf_Curved1 5
+    2300090: Leaf_Curved1 6
+    2300092: Leaf_Curved1 7
+    2300094: Leaf_Curved1 8
+    2300096: Leaf_Curved1 9
+    2300098: Leaf_Curved2
+    2300100: Leaf_Curved2 1
+    2300102: Leaf_Curved2 10
+    2300104: Leaf_Curved2 11
+    2300106: Leaf_Curved2 2
+    2300108: Leaf_Curved2 3
+    2300110: Leaf_Curved2 4
+    2300112: Leaf_Curved2 5
+    2300114: Leaf_Curved2 6
+    2300116: Leaf_Curved2 7
+    2300118: Leaf_Curved2 8
+    2300120: Leaf_Curved2 9
+    2300122: Leaf_Curved3
+    2300124: Leaf_Curved3 1
+    2300126: Leaf_Curved3 10
+    2300128: Leaf_Curved3 11
+    2300130: Leaf_Curved3 2
+    2300132: Leaf_Curved3 3
+    2300134: Leaf_Curved3 4
+    2300136: Leaf_Curved3 5
+    2300138: Leaf_Curved3 6
+    2300140: Leaf_Curved3 7
+    2300142: Leaf_Curved3 8
+    2300144: Leaf_Curved3 9
+    2300146: Pond
+    2300148: Pond_Smooth
+    3300000: Grass
+    3300002: Leaf
+    3300004: Leaf 1
+    3300006: Leaf 2
+    3300008: Leaf 3
+    3300010: Leaf 4
+    3300012: Leaf 5
+    3300014: Leaf1
+    3300016: Leaf1 1
+    3300018: Leaf1 2
+    3300020: Leaf1 3
+    3300022: Leaf1 4
+    3300024: Leaf1 5
+    3300026: Leaf2
+    3300028: Leaf2 1
+    3300030: Leaf2 2
+    3300032: Leaf2 3
+    3300034: Leaf2 4
+    3300036: Leaf2 5
+    3300038: Leaf3
+    3300040: Leaf3 1
+    3300042: Leaf3 2
+    3300044: Leaf3 3
+    3300046: Leaf3 4
+    3300048: Leaf3 5
+    3300050: Leaf_Curved
+    3300052: Leaf_Curved 1
+    3300054: Leaf_Curved 10
+    3300056: Leaf_Curved 11
+    3300058: Leaf_Curved 2
+    3300060: Leaf_Curved 3
+    3300062: Leaf_Curved 4
+    3300064: Leaf_Curved 5
+    3300066: Leaf_Curved 6
+    3300068: Leaf_Curved 7
+    3300070: Leaf_Curved 8
+    3300072: Leaf_Curved 9
+    3300074: Leaf_Curved1
+    3300076: Leaf_Curved1 1
+    3300078: Leaf_Curved1 10
+    3300080: Leaf_Curved1 11
+    3300082: Leaf_Curved1 2
+    3300084: Leaf_Curved1 3
+    3300086: Leaf_Curved1 4
+    3300088: Leaf_Curved1 5
+    3300090: Leaf_Curved1 6
+    3300092: Leaf_Curved1 7
+    3300094: Leaf_Curved1 8
+    3300096: Leaf_Curved1 9
+    3300098: Leaf_Curved2
+    3300100: Leaf_Curved2 1
+    3300102: Leaf_Curved2 10
+    3300104: Leaf_Curved2 11
+    3300106: Leaf_Curved2 2
+    3300108: Leaf_Curved2 3
+    3300110: Leaf_Curved2 4
+    3300112: Leaf_Curved2 5
+    3300114: Leaf_Curved2 6
+    3300116: Leaf_Curved2 7
+    3300118: Leaf_Curved2 8
+    3300120: Leaf_Curved2 9
+    3300122: Leaf_Curved3
+    3300124: Leaf_Curved3 1
+    3300126: Leaf_Curved3 10
+    3300128: Leaf_Curved3 11
+    3300130: Leaf_Curved3 2
+    3300132: Leaf_Curved3 3
+    3300134: Leaf_Curved3 4
+    3300136: Leaf_Curved3 5
+    3300138: Leaf_Curved3 6
+    3300140: Leaf_Curved3 7
+    3300142: Leaf_Curved3 8
+    3300144: Leaf_Curved3 9
+    3300146: Pond
+    3300148: Pond_Smooth
+    4300000: Pond
+    4300002: Pond_Smooth
+    4300004: Grass
+    4300006: Leaf
+    4300008: Leaf1
+    4300010: Leaf2
+    4300012: Leaf3
+    4300014: Leaf_Curved
+    4300016: Leaf_Curved1
+    4300018: Leaf_Curved2
+    4300020: Leaf_Curved3
+    4300022: Leaf_Curved
+    4300024: Leaf_Curved1
+    4300026: Leaf_Curved2
+    4300028: Leaf_Curved3
+    4300030: Leaf
+    4300032: Leaf1
+    4300034: Leaf2
+    4300036: Leaf3
+    4300038: Leaf_Curved
+    4300040: Leaf_Curved1
+    4300042: Leaf_Curved2
+    4300044: Leaf_Curved3
+    4300046: Leaf_Curved
+    4300048: Leaf_Curved1
+    4300050: Leaf_Curved2
+    4300052: Leaf_Curved3
+    4300054: Leaf
+    4300056: Leaf1
+    4300058: Leaf2
+    4300060: Leaf3
+    4300062: Leaf_Curved
+    4300064: Leaf_Curved1
+    4300066: Leaf_Curved2
+    4300068: Leaf_Curved3
+    4300070: Leaf_Curved
+    4300072: Leaf_Curved1
+    4300074: Leaf_Curved2
+    4300076: Leaf_Curved3
+    4300078: Leaf
+    4300080: Leaf1
+    4300082: Leaf2
+    4300084: Leaf3
+    4300086: Leaf_Curved
+    4300088: Leaf_Curved1
+    4300090: Leaf_Curved2
+    4300092: Leaf_Curved3
+    4300094: Leaf_Curved
+    4300096: Leaf_Curved1
+    4300098: Leaf_Curved2
+    4300100: Leaf_Curved3
+    4300102: Leaf
+    4300104: Leaf1
+    4300106: Leaf2
+    4300108: Leaf3
+    4300110: Leaf_Curved
+    4300112: Leaf_Curved1
+    4300114: Leaf_Curved2
+    4300116: Leaf_Curved3
+    4300118: Leaf_Curved
+    4300120: Leaf_Curved1
+    4300122: Leaf_Curved2
+    4300124: Leaf_Curved3
+    4300126: Leaf
+    4300128: Leaf1
+    4300130: Leaf2
+    4300132: Leaf3
+    4300134: Leaf_Curved
+    4300136: Leaf_Curved1
+    4300138: Leaf_Curved2
+    4300140: Leaf_Curved3
+    4300142: Leaf_Curved
+    4300144: Leaf_Curved1
+    4300146: Leaf_Curved2
+    4300148: Leaf_Curved3
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
