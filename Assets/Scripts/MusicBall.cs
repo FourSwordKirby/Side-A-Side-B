@@ -23,8 +23,8 @@ public class MusicBall : MonoBehaviour {
             Music_Controller musicSource = GameObject.FindObjectOfType<Music_Controller>();
             musicSource.increaseVolume(musicSource.instruments[0]);
             this.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10))); 
-        } else {
-            //Debug.Log(col.gameObject.name);       
+        } else if(col.gameObject.GetComponent<FlipperController>() != null){
+            this.gameObject.GetComponent<Rigidbody>().AddForce(col.gameObject.GetComponent<Rigidbody>().angularVelocity); 
         }
     }
 }
