@@ -16,13 +16,15 @@ public class MusicBall : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
+        if (col.gameObject.name == "Flipper_1")
+            Debug.Log("hi");
         if (col.gameObject.name == "temp" || col.gameObject.name == "Pinball")
         {
             Music_Controller musicSource = GameObject.FindObjectOfType<Music_Controller>();
             musicSource.increaseVolume(musicSource.instruments[0]);
             this.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10))); 
         } else {
-            Debug.Log(col.gameObject.name);       
+            //Debug.Log(col.gameObject.name);       
         }
     }
 }
