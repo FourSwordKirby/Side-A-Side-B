@@ -18,13 +18,11 @@ public class MusicBall : MonoBehaviour {
     {
         if (col.gameObject.name == "Flipper_1")
             Debug.Log("hi");
-        if (col.gameObject.name.StartsWith("Flipper") || col.gameObject.name == "Pinball" || col.gameObject.name == "Bumper")
+        if (col.gameObject.name == "Pinball" || col.gameObject.name == "Bumper")
         {
             Music_Controller musicSource = GameObject.FindObjectOfType<Music_Controller>();
             musicSource.increaseVolume(musicSource.instruments[0]);
             this.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10))); 
-        } else if(col.gameObject.GetComponent<FlipperController>() != null){
-            this.gameObject.GetComponent<Rigidbody>().AddForce(col.gameObject.GetComponent<Rigidbody>().angularVelocity); 
         }
     }
 }
