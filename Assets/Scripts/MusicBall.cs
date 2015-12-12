@@ -18,7 +18,7 @@ public class MusicBall : MonoBehaviour {
     {
         if (col.gameObject.name == "Flipper_1")
             Debug.Log("hi");
-        if (col.gameObject.name == "temp" || col.gameObject.name == "Pinball")
+        if (col.gameObject.name.StartsWith("Flipper") || col.gameObject.name == "Pinball" || col.gameObject.name == "Bumper")
         {
             Music_Controller musicSource = GameObject.FindObjectOfType<Music_Controller>();
             musicSource.increaseVolume(musicSource.instruments[0]);
