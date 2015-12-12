@@ -67,6 +67,7 @@ ModelImporter:
     100118: Leaves_Flower_Arranged_Leaf3
     100120: //RootNode
     100122: Pond_Smooth
+    100124: Pond_Raised
     400000: Flower_Arranged1_Leaf_Curved_Petals
     400002: Flower_Arranged1_Leaf_Curved_Petals_Inner
     400004: Flower_Arranged1_Petals_Inner_Leaf_Curved1
@@ -129,6 +130,7 @@ ModelImporter:
     400118: Leaves_Flower_Arranged_Leaf3
     400120: //RootNode
     400122: Pond_Smooth
+    400124: Pond_Raised
     2300000: Flower_Arranged1_Leaf_Curved_Petals
     2300002: Flower_Arranged1_Leaf_Curved_Petals_Inner
     2300004: Flower_Arranged1_Petals_Inner_Leaf_Curved1
@@ -190,6 +192,7 @@ ModelImporter:
     2300116: Leaves_Flower_Arranged_Leaf2
     2300118: Leaves_Flower_Arranged_Leaf3
     2300120: Pond_Smooth
+    2300122: Pond_Raised
     3300000: Flower_Arranged1_Leaf_Curved_Petals
     3300002: Flower_Arranged1_Leaf_Curved_Petals_Inner
     3300004: Flower_Arranged1_Petals_Inner_Leaf_Curved1
@@ -251,6 +254,7 @@ ModelImporter:
     3300116: Leaves_Flower_Arranged_Leaf2
     3300118: Leaves_Flower_Arranged_Leaf3
     3300120: Pond_Smooth
+    3300122: Pond_Raised
     4300000: Flower_Arranged1_Leaf_Curved_Petals
     4300002: Flower_Arranged1_Leaf_Curved_Petals_Inner
     4300004: Flower_Arranged1_Petals_Inner_Leaf_Curved1
@@ -312,6 +316,7 @@ ModelImporter:
     4300116: Leaves_Flower_Arranged_Leaf2
     4300118: Leaves_Flower_Arranged_Leaf3
     4300120: Pond_Smooth
+    4300122: Pond_Raised
   materials:
     importMaterials: 1
     materialName: 0

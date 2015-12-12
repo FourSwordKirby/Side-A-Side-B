@@ -105,6 +105,9 @@ ModelImporter:
     100194: Pond
     100196: //RootNode
     100198: Pond_Smooth
+    100200: Pond_Raised
+    100202: Pond_Original
+    100204: Pond_Smooth_Original
     400000: Flower
     400002: Flower_Arranged
     400004: Flower_Arranged1
@@ -205,6 +208,9 @@ ModelImporter:
     400194: Pond
     400196: //RootNode
     400198: Pond_Smooth
+    400200: Pond_Raised
+    400202: Pond_Original
+    400204: Pond_Smooth_Original
     2300000: Grass
     2300002: Leaf
     2300004: Leaf 1
@@ -280,6 +286,9 @@ ModelImporter:
     2300144: Leaf_Curved3 9
     2300146: Pond
     2300148: Pond_Smooth
+    2300150: Pond_Raised
+    2300152: Pond_Original
+    2300154: Pond_Smooth_Original
     3300000: Grass
     3300002: Leaf
     3300004: Leaf 1
@@ -355,6 +364,9 @@ ModelImporter:
     3300144: Leaf_Curved3 9
     3300146: Pond
     3300148: Pond_Smooth
+    3300150: Pond_Raised
+    3300152: Pond_Original
+    3300154: Pond_Smooth_Original
     4300000: Pond
     4300002: Pond_Smooth
     4300004: Grass
@@ -430,6 +442,9 @@ ModelImporter:
     4300144: Leaf_Curved1
     4300146: Leaf_Curved2
     4300148: Leaf_Curved3
+    4300150: Pond_Raised
+    4300152: Pond_Original
+    4300154: Pond_Smooth_Original
     9500000: //RootNode
   materials:
     importMaterials: 1

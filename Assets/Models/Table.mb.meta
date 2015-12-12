@@ -27,6 +27,7 @@ ModelImporter:
     100038: Railing_Top 2
     100040: Railing_Top 3
     100042: Railing_Top 4
+    100044: Table_Old
     400000: Pillar
     400002: Railing_Top
     400004: //RootNode
@@ -49,6 +50,7 @@ ModelImporter:
     400038: Railing_Top 2
     400040: Railing_Top 3
     400042: Railing_Top 4
+    400044: Table_Old
     2300000: Pillar
     2300002: Railing_Top
     2300004: Table
@@ -65,6 +67,7 @@ ModelImporter:
     2300026: Railing_Top 2
     2300028: Railing_Top 3
     2300030: Railing_Top 4
+    2300032: Table_Old
     3300000: Pillar
     3300002: Railing_Top
     3300004: Table
@@ -81,6 +84,7 @@ ModelImporter:
     3300026: Railing_Top 2
     3300028: Railing_Top 3
     3300030: Railing_Top 4
+    3300032: Table_Old
     4300000: Table
     4300002: Railing_Top
     4300004: Pillar
@@ -97,6 +101,7 @@ ModelImporter:
     4300026: Railing_Top
     4300028: Railing_Bottom
     4300030: Pillar
+    4300032: Table_Old
     9500000: //RootNode
   materials:
     importMaterials: 1
