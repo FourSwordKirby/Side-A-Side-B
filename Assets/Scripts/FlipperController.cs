@@ -27,7 +27,7 @@ public class FlipperController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         pullBackMagnitude = 0;
-		baseRotation = transform.localRotation;
+		baseRotation = transform.rotation;
         this.GetComponent<Rigidbody>().centerOfMass = Vector3.zero;
         this.GetComponent<Rigidbody>().maxAngularVelocity = 30.0f;
 

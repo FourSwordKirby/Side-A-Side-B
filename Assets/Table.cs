@@ -21,12 +21,7 @@ public class Table : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (!flipping)
-            {
-                onSideA = !onSideA;
-                flipping = true;
-            }
-            Debug.Log("testing");
+            flipTable();
         }
 	}
 
@@ -73,6 +68,15 @@ public class Table : MonoBehaviour {
 
                 }
             }
+        }
+    }
+
+    void flipTable()
+    {
+        if (!flipping)
+        {
+            onSideA = !onSideA;
+            flipping = true;
         }
     }
 }
