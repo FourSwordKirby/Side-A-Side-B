@@ -42,29 +42,6 @@ public class Music_Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		// FOR USE WITH MIDI INPUT. Switch with keyboard input if necessary.
-		/*
-		for (int key = 0; key < keyCount; key++)
-		{
-			if (MidiMaster.GetKey(key) > 0)
-			{
-				int i = key % instrumentCount;
-				AudioSource instrument = instruments[i];
-				increaseVolume (instrument);
-			}
-		}
-		*/
-
-		// FOR USE WITH KEYBOARD INPUT. Switch with MIDI input if necessary.
-		string keyPressed = Input.inputString;
-		if (keyPressed != "")
-		{
-			int keyOrd = (int)keyPressed [0]; // A bit hacky...
-			int i = keyOrd % instrumentCount;
-			AudioSource instrument = instruments[i];
-			increaseVolume (instrument);
-		}
-
 		// DO NOT TOGGLE THIS.
 		for (int i = 0; i < instrumentCount; i++)
 		{

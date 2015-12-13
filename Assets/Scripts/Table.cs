@@ -112,6 +112,10 @@ public class Table : MonoBehaviour {
         return onSideA;
     }
 
+	public bool IsFlipping() {
+		return flipping;
+	}
+
     void flipTable()
     {
         if (!flipping)
