@@ -98,7 +98,6 @@ public class FlipperController : MonoBehaviour {
         if ((Mathf.Abs(pullBackMagnitude) - Mathf.Abs(Controls.getFlipperMagnitude(player)) > 0.4)
             && wobbleCharge > 0)
         {
-            pullBackMagnitude *= 1;
             this.GetComponent<Rigidbody>().AddTorque(0, -pullBackMagnitude * FLIPPER_FORCE, 0, ForceMode.Impulse);
             isWobbling = true;
             return;

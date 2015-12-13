@@ -7,14 +7,24 @@ public class Table : MonoBehaviour {
 
     private bool flipping;
 
-    private Vector3 sideAPosition = Vector3.zero;
-    private Vector3 sideBPosition = new Vector3(0, -12.4f, 0);
+    private Vector3 sideAPosition;
+    private Vector3 sideBPosition;
 
+    private Quaternion sideARotation;
+    private Quaternion sideBRotation;
 
 	// Use this for initialization
 	void Start () {
         onSideA = true;
         flipping = false;
+
+        sideAPosition = Vector3.zero;
+        sideBPosition = new Vector3(0, -12.4f, 0);
+
+        sideARotation = this.transform.rotation;
+        this.transform.Rotate(0, 180, 180);
+        sideBRotation = this.transform.rotation;
+        this.transform.Rotate(0, -180, -180);
 	}
 	
 	// Update is called once per frame
@@ -33,28 +43,11 @@ public class Table : MonoBehaviour {
             {
                 this.transform.position = Vector3.MoveTowards(this.transform.position, sideAPosition, 0.1f);
             }
-            if (this.transform.rotation.eulerAngles.y != 0.0f || this.transform.rotation.eulerAngles.z != 0.0f)
+            if (this.transform.rotation != sideARotation)
             {
-                this.transform.Rotate(new Vector3(0, -1f, 1f));
-
-                if (this.transform.rotation.eulerAngles.z > 0 && this.transform.rotation.eulerAngles.z < 180.0f)
-                {
-                    float yOriginal = this.transform.rotation.eulerAngles.y;
-                    float zOriginal = this.transform.rotation.eulerAngles.z;
-
-                    this.transform.Rotate(0, -this.transform.rotation.eulerAngles.y, -this.transform.rotation.eulerAngles.z);
-                    this.transform.Rotate(0, yOriginal, 0);
-                }
-                if (this.transform.rotation.eulerAngles.y < 0)
-                {
-                    float yOriginal = this.transform.rotation.eulerAngles.y;
-                    float zOriginal = this.transform.rotation.eulerAngles.z;
-
-                    this.transform.Rotate(0, -this.transform.rotation.eulerAngles.y, -this.transform.rotation.eulerAngles.z);
-                    this.transform.Rotate(0, 0, zOriginal);
-                }
+                this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, sideARotation, 1.0f);
             }
-            if (this.transform.position == sideAPosition && this.transform.rotation.eulerAngles.z == 0.0f && this.flipping == true)
+            if (this.transform.position == sideAPosition && this.transform.rotation == sideARotation && this.flipping == true)
             {
                 foreach (FlipperController flipper in GameObject.FindObjectsOfType<FlipperController>())
                 {
@@ -72,29 +65,11 @@ public class Table : MonoBehaviour {
             {
                 this.transform.position = Vector3.MoveTowards(this.transform.position, sideBPosition, 0.1f);
             }
-            if (this.transform.rotation.eulerAngles.y != 36.0f || this.transform.rotation.eulerAngles.z != 180.0f)
+            if (this.transform.rotation != sideBRotation)
             {
-                this.transform.Rotate(new Vector3(0, 1f, 1f));
-
-                if (this.transform.rotation.eulerAngles.z > 180.0f)
-                {
-                    float yOriginal = this.transform.rotation.eulerAngles.y;
-                    float zOriginal = this.transform.rotation.eulerAngles.z;
-
-                    this.transform.Rotate(0, -this.transform.rotation.eulerAngles.y, -this.transform.rotation.eulerAngles.z);
-                    this.transform.Rotate(0, yOriginal, 180);
-                }
-                if (this.transform.rotation.eulerAngles.y > 36)
-                {
-                    float yOriginal = this.transform.rotation.eulerAngles.y;
-                    float zOriginal = this.transform.rotation.eulerAngles.z;
-
-                    this.transform.Rotate(0, -this.transform.rotation.eulerAngles.y, -this.transform.rotation.eulerAngles.z);
-                    this.transform.Rotate(0, 36, zOriginal);
-                }
+                this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, sideBRotation, 1.0f);
             }
-            if (this.transform.position == sideBPosition && this.transform.rotation.eulerAngles.z == 180.0f && this.transform.rotation.eulerAngles.y == 36.0f 
-                && this.flipping == true)
+            if (this.transform.position == sideBPosition && this.transform.rotation == sideBRotation && this.flipping == true)
             {
                 foreach (FlipperController flipper in GameObject.FindObjectsOfType<FlipperController>())
                 {
