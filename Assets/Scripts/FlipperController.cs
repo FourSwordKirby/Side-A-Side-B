@@ -6,6 +6,8 @@ public class FlipperController : MonoBehaviour {
     public float pullBackMagnitude;
     public int player;
 
+    public bool controllable;
+
 	private Quaternion baseRotation;
     private float wobbleCharge;
     private bool isWobbling;
@@ -33,7 +35,21 @@ public class FlipperController : MonoBehaviour {
 
         returnedToNeutral = false;
         isWobbling = false;
+        enabled = controllable;
 	}
+
+    public void Reinitialize()
+    {
+        pullBackMagnitude = 0;
+        baseRotation = transform.rotation;
+        this.GetComponent<Rigidbody>().centerOfMass = Vector3.zero;
+        this.GetComponent<Rigidbody>().maxAngularVelocity = 30.0f;
+
+        returnedToNeutral = false;
+        isWobbling = false;
+        controllable = !controllable;
+        enabled = controllable;
+    }
 
 	//FixedUpdate is called once per frame, handle's physics
     void FixedUpdate()

@@ -5,7 +5,7 @@ public class Controls {
 
     public static float getFlipperMagnitude(int player)
     {
-        return Input.GetAxis("P"+(player)+"_Vertical");
+        return -Mathf.Abs(Input.GetAxis("P"+(player)+"_Vertical"));
     }
 
     public static bool interactInputDown()
