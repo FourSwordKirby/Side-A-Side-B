@@ -68,13 +68,13 @@ public class BallController : MonoBehaviour {
 				if (table.IsOnSideA()) { 
 					rand = Random.Range(0,4);
 					musicball.Initialize(true, soundsA[rand]);
-					newball.transform.position = new Vector3(roulette.transform.position.x, roulette.transform.position.y + 10, roulette.transform.position.z);
+					newball.transform.position = new Vector3(roulette.transform.position.x, roulette.transform.position.y + 4, roulette.transform.position.z);
 				}
 					/* Casino */
 				else {
 					rand = Random.Range(0,6);
 					musicball.Initialize(false, soundsB[rand]);
-					newball.transform.position = new Vector3(flower.transform.position.x, flower.transform.position.y + 10, flower.transform.position.z);
+					newball.transform.position = new Vector3(flower.transform.position.x, flower.transform.position.y + 4, flower.transform.position.z);
 				}
 				pinballs.Add(newball);
 			}

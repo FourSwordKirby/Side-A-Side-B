@@ -30,6 +30,9 @@ public class MusicBall : MonoBehaviour {
 			GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load (musicNote);
 			GetComponent<AudioSource> ().Play ();
 		}
+
+		//give this thing a force
+		gameObject.GetComponent<Rigidbody> ().AddForce (new Vector3 (Random.Range (-4,4), 2, Random.Range (-4,4)));
     }
 
     void OnCollisionEnter(Collision col)
