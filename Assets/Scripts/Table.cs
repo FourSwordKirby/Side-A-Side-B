@@ -13,10 +13,16 @@ public class Table : MonoBehaviour {
     private Quaternion sideARotation;
     private Quaternion sideBRotation;
 
+	private BallController ballController;
+	private Music_Controller musicController;
+
 	// Use this for initialization
 	void Start () {
         onSideA = true;
         flipping = false;
+
+		ballController = GameObject.FindObjectOfType<BallController>();
+		musicController = GameObject.FindObjectOfType<Music_Controller> ();
 
         sideAPosition = Vector3.zero;
         sideBPosition = new Vector3(0, -12.4f, 0);
@@ -57,6 +63,7 @@ public class Table : MonoBehaviour {
                     flipper.Reinitialize();
                 }
                 this.flipping = false;
+				musicController.StartPlaying();
             }
         }
         else
@@ -95,6 +102,8 @@ public class Table : MonoBehaviour {
     {
         if (!flipping)
         {
+			ballController.ClearBalls();
+			musicController.StopPlaying();
             foreach (FlipperController flipper in GameObject.FindObjectsOfType<FlipperController>())
             {
                 flipper.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;

@@ -30,6 +30,7 @@ public class BallController : MonoBehaviour {
 		soundsB[5] = "Db5";
 
 		table = GameObject.Find ("Table").GetComponent<Table> ();
+		pinballs = new List<GameObject> ();
     }
     
     // Update is called once per frame
@@ -68,14 +69,22 @@ public class BallController : MonoBehaviour {
 					rand = Random.Range(0,6);
 					musicball.Initialize(false, soundsB[rand]);
 				}
+				pinballs.Add(newball);
 			}
 		}
 	}
 
-	void ClearBalls() {
-		while (pinballs.Count > 0) {
-			pinballs.Remove (pinballs[0]);
-			Destroy(pinballs[0]);
+	public void RemoveBall(GameObject ball) {
+		pinballs.Remove (ball);
+		Destroy (ball);
+	}
+
+	public void ClearBalls() {
+		GameObject[] pins = pinballs.ToArray();
+		Debug.Log ("pinballs when trying to flip " + pins.Length);
+		pinballs.Clear ();
+		foreach (GameObject pinball in pins) {
+			Destroy (pinball);
 		}
 	}
 }

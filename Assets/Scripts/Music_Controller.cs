@@ -75,4 +75,15 @@ public class Music_Controller : MonoBehaviour {
 		changeVolume (audio, -decreaseAmount);
 		//		Debug.Log ("Decreasing " + audio);
 	}
+
+	public void StartPlaying() {
+		GameObject.Find ("Drum").GetComponent<AudioSource> ().volume = 1.0f;
+	}
+
+	public void StopPlaying() {
+		GameObject.Find ("Drum").GetComponent<AudioSource> ().volume = 0f;
+		foreach (AudioSource source in instruments) {
+			source.volume = 0f;
+		}
+	}
 }

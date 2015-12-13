@@ -5,17 +5,20 @@ public class MusicBall : MonoBehaviour {
 
     public string note;
 	private Music_Controller musicSource;
+	private BallController ballController;
 	private bool sideA;
 
 	// Use this for initialization
 	void Start () {
 		musicSource = GameObject.FindObjectOfType<Music_Controller>();
+		ballController = GameObject.FindObjectOfType<BallController> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (this.transform.position.y <= -10)
-            this.transform.position = new Vector3(Random.Range(-4, 4),40, Random.Range(-4, 4));
+        if (this.transform.position.y <= -10) {
+			ballController.RemoveBall(gameObject);
+		}
 	}
 
     public void Initialize(bool onSideA, string musicNote) {
