@@ -13,6 +13,9 @@ public class BallController : MonoBehaviour {
 	public List<Texture> textureB;
 	public GameObject pinballPrefab;
 
+	private GameObject roulette;
+	private GameObject flower;
+
     // Use this for initialization
 	void Start () {
 		soundsA = new string[4];
@@ -31,6 +34,9 @@ public class BallController : MonoBehaviour {
 
 		table = GameObject.Find ("Table").GetComponent<Table> ();
 		pinballs = new List<GameObject> ();
+
+		roulette = GameObject.Find ("Roulette_Center");
+		flower = GameObject.Find ("Trumpet");
     }
     
     // Update is called once per frame
@@ -58,16 +64,17 @@ public class BallController : MonoBehaviour {
 
 				GameObject newball = Instantiate(pinballPrefab);
 				MusicBall musicball = newball.GetComponent<MusicBall>();
-				newball.transform.position = new Vector3(Random.Range(-4, 4),40, Random.Range(-4, 4));
 					/* Pond */
 				if (table.IsOnSideA()) { 
 					rand = Random.Range(0,4);
 					musicball.Initialize(true, soundsA[rand]);
+					newball.transform.position = new Vector3(roulette.transform.position.x, roulette.transform.position.y + 10, roulette.transform.position.z);
 				}
 					/* Casino */
 				else {
 					rand = Random.Range(0,6);
 					musicball.Initialize(false, soundsB[rand]);
+					newball.transform.position = new Vector3(flower.transform.position.x, flower.transform.position.y + 10, flower.transform.position.z);
 				}
 				pinballs.Add(newball);
 			}
