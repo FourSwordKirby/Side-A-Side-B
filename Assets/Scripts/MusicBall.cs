@@ -22,6 +22,11 @@ public class MusicBall : MonoBehaviour {
 		sideA = onSideA;
 		note = musicNote;
 
+		//only balls on side B need to play their own sound
+		if (!onSideA) {
+			GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load (musicNote);
+			GetComponent<AudioSource> ().Play ();
+		}
     }
 
     void OnCollisionEnter(Collision col)
@@ -30,8 +35,15 @@ public class MusicBall : MonoBehaviour {
             Debug.Log("hi");
         if (col.gameObject.name == "Pinball" || col.gameObject.name == "Bumper")
         {
-            musicSource.increaseVolume(musicSource.instruments[0]);
-            this.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10))); 
+			if (sideA) {
+	            musicSource.increaseVolume(musicSource.instruments[0]);
+	            this.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10))); 
+			} else {
+				if (GetComponent<AudioSource>().isPlaying) {
+					GetComponent<AudioSource>().Stop ();
+				}
+				GetComponent<AudioSource>().Play();
+			}
         }
     }
 }

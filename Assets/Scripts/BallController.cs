@@ -9,8 +9,8 @@ public class BallController : MonoBehaviour {
 	private Table table;
 	private List<GameObject> pinballs;
 
-	public Texture[] textureA;
-	public Texture[] textureB;
+	public List<Texture> textureA;
+	public List<Texture> textureB;
 	public GameObject pinballPrefab;
 
     // Use this for initialization
