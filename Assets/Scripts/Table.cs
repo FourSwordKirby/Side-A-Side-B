@@ -43,6 +43,13 @@ public class Table : MonoBehaviour {
 
     void FixedUpdate()
     {
+        //Make sure all paddles are done
+        foreach (FlipperController flipper in GameObject.FindObjectsOfType<FlipperController>())
+        {
+            if (flipper.enabled)
+                return;
+        }
+
         if (onSideA)
         {
             if (this.transform.position != sideAPosition)
@@ -104,11 +111,11 @@ public class Table : MonoBehaviour {
         {
 			ballController.ClearBalls();
 			musicController.StopPlaying();
+            Debug.Log("here?");
             foreach (FlipperController flipper in GameObject.FindObjectsOfType<FlipperController>())
             {
-                flipper.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-                flipper.gameObject.GetComponent<Rigidbody>().isKinematic = true;
-                flipper.enabled = false;
+                if(flipper.enabled)
+                    flipper.resetPosition();
             }
             onSideA = !onSideA;
             flipping = true;

@@ -11,6 +11,7 @@ public class FlipperController : MonoBehaviour {
 	private Quaternion baseRotation;
     private float wobbleCharge;
     private bool isWobbling;
+    private bool resetting;
     private bool returnedToNeutral;
 
     private const float FLIPPER_FORCE = 80.0f;
@@ -35,6 +36,7 @@ public class FlipperController : MonoBehaviour {
 
         returnedToNeutral = false;
         isWobbling = false;
+        resetting = false;
         enabled = controllable;
 	}
 
@@ -51,9 +53,44 @@ public class FlipperController : MonoBehaviour {
         enabled = controllable;
     }
 
+    public void resetPosition()
+    {
+        returnedToNeutral = true;
+        resetting = true;
+
+        this.GetComponent<Rigidbody>().AddTorque(0, -pullBackMagnitude * FLIPPER_FORCE, 0, ForceMode.Impulse);
+        isWobbling = true;
+    }
+
 	//FixedUpdate is called once per frame, handle's physics
     void FixedUpdate()
     {
+        //Reset code (lol giant decision tree)
+        if (resetting)
+        {
+            if ((transform.rotation.eulerAngles.y < baseRotation.eulerAngles.y && pullBackMagnitude > 0)
+                || (transform.rotation.eulerAngles.y > baseRotation.eulerAngles.y) && pullBackMagnitude < 0)
+            {
+                this.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                pullBackMagnitude *= -0.75f;
+                this.GetComponent<Rigidbody>().AddTorque(0, -pullBackMagnitude * FLIPPER_FORCE, 0, ForceMode.Impulse);
+            }
+
+            if (Mathf.Abs(pullBackMagnitude) > 0.0001)
+            {
+                return;
+            }
+            else
+            {
+                this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                this.GetComponent<Rigidbody>().isKinematic = true;
+                resetting = false;
+                enabled = false;
+                Debug.Log("still here");
+                return;
+            }
+        }
+
         //Handling the wobbling
         if (isWobbling)
         {
@@ -117,11 +154,6 @@ public class FlipperController : MonoBehaviour {
         {
             wobbleCharge = Mathf.Max(wobbleCharge - Time.deltaTime, 0);
         }
-    }
-
-    void OnMouseDown()
-    {
-        this.GetComponent<Rigidbody>().AddForce(0, 0, 10);
     }
 
     void OnGUI()

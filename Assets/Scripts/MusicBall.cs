@@ -37,8 +37,6 @@ public class MusicBall : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "Flipper_1")
-            Debug.Log("hi");
         if (col.gameObject.name == "Pinball" || col.gameObject.name == "Bumper")
         {
 			if (sideA) {
