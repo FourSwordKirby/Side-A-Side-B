@@ -50,6 +50,7 @@ public class FlipperController : MonoBehaviour {
         returnedToNeutral = false;
         isWobbling = false;
         controllable = !controllable;
+        this.GetComponent<Rigidbody>().isKinematic = !controllable;
         enabled = controllable;
     }
 
