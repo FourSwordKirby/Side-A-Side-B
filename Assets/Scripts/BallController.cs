@@ -8,6 +8,7 @@ public class BallController : MonoBehaviour {
 	public string[] soundsB; //casino
 	private Table table;
 	private List<GameObject> pinballs;
+	private int tableTrigger;
 
 	public List<Texture> textureA;
 	public List<Texture> textureB;
@@ -37,6 +38,8 @@ public class BallController : MonoBehaviour {
 
 		roulette = GameObject.Find ("Roulette_Center");
 		flower = GameObject.Find ("Trumpet");
+
+		tableTrigger = 0;
     }
     
     // Update is called once per frame
@@ -79,11 +82,21 @@ public class BallController : MonoBehaviour {
 				pinballs.Add(newball);
 			}
 		}
+
+		if (tableTrigger >= 6) {
+			tableTrigger = 0;
+			table.flipTable();
+		}
 	}
 
 	public void RemoveBall(GameObject ball) {
 		pinballs.Remove (ball);
 		Destroy (ball);
+	}
+
+	public void TriggerTableFlip(GameObject ball) {
+		++tableTrigger;
+		RemoveBall (ball);
 	}
 
 	public void ClearBalls() {

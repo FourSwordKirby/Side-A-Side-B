@@ -105,7 +105,7 @@ public class Table : MonoBehaviour {
 		return flipping;
 	}
 
-    void flipTable()
+    public void flipTable()
     {
         if (!flipping)
         {
