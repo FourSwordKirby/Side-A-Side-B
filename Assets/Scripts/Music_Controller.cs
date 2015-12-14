@@ -11,6 +11,10 @@ public class Music_Controller : MonoBehaviour {
 	private AudioSource drum;
 	private AudioSource pentatonicBG;
 
+	private AudioSource clarinet;
+	private AudioSource piano;
+	private AudioSource guitar;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -42,6 +46,9 @@ public class Music_Controller : MonoBehaviour {
 		}
 
 		drum = GameObject.Find ("Drum").GetComponent<AudioSource> ();
+		piano = GameObject.Find ("Piano").GetComponent<AudioSource> ();
+		guitar = GameObject.Find ("Guitar").GetComponent<AudioSource> ();
+		clarinet = GameObject.Find ("Clarinet").GetComponent<AudioSource> ();
 		pentatonicBG = GameObject.Find ("PentatonicBG").GetComponent<AudioSource> ();
 
 		StartPlaying ();

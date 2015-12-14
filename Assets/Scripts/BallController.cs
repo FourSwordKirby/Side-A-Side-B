@@ -26,8 +26,7 @@ public class BallController : MonoBehaviour {
 	void Start () {
 		soundsA = new string[4];
 		soundsA[0] = "Clarinet";
-		soundsA[1] = "Drum";
-		soundsA[2] = "Guitar";
+		soundsA[1] = "Guitar";
 		soundsA[3] = "Piano";
 		
 		soundsB = new string[6];
@@ -77,15 +76,17 @@ public class BallController : MonoBehaviour {
 				MusicBall musicball = newball.GetComponent<MusicBall>();
 					/* Pond */
 				if (table.IsOnSideA()) { 
-					rand = Random.Range(0,4);
-					musicball.Initialize(true, soundsA[rand]);
+					rand = Random.Range(0,3);
+					musicball.Initialize(true, null, rand);
 					newball.transform.position = new Vector3(roulette.transform.position.x, roulette.transform.position.y + 4, roulette.transform.position.z);
+					newball.GetComponent<MeshRenderer>().material.SetTexture(rand, textureA[rand]);
 				}
 					/* Casino */
 				else {
 					rand = Random.Range(0,6);
-					musicball.Initialize(false, soundsB[rand]);
+					musicball.Initialize(false, soundsB[rand], 0);
 					newball.transform.position = new Vector3(flower.transform.position.x, flower.transform.position.y + 4, flower.transform.position.z);
+					newball.GetComponent<MeshRenderer>().material.SetTexture(rand, textureB[rand]);
 				}
 				pinballs.Add(newball);
 			}

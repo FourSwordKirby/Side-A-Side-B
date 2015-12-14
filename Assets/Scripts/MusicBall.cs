@@ -7,6 +7,7 @@ public class MusicBall : MonoBehaviour {
 	private Music_Controller musicSource;
 	private BallController ballController;
 	private bool sideA;
+	private int sound; //instrument
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +22,7 @@ public class MusicBall : MonoBehaviour {
 		}
 	}
 
-    public void Initialize(bool onSideA, string musicNote) {
+    public void Initialize(bool onSideA, string musicNote, int instrument) {
 		sideA = onSideA;
 		note = musicNote;
 
@@ -29,6 +30,8 @@ public class MusicBall : MonoBehaviour {
 		if (!onSideA) {
 			GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load (musicNote);
 			GetComponent<AudioSource> ().Play ();
+		} else {
+			sound = instrument;
 		}
 
 		//give this thing a force
@@ -40,7 +43,7 @@ public class MusicBall : MonoBehaviour {
     {
         if (col.gameObject.name == "Pinball" || col.gameObject.name == "Bumper" || col.gameObject.name.StartsWith("Railing")) {
 			if (sideA) {
-				musicSource.increaseVolume (musicSource.instruments [0]);
+				musicSource.increaseVolume (musicSource.instruments [sound]);
 				this.gameObject.GetComponent<Rigidbody> ().AddForce (new Vector3 (Random.Range (-10, 10), 0, Random.Range (-10, 10))); 
 			} else {
 				if (GetComponent<AudioSource> ().isPlaying) {
