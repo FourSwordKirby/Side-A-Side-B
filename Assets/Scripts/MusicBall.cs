@@ -7,7 +7,6 @@ public class MusicBall : MonoBehaviour {
 	private Music_Controller musicSource;
 	private BallController ballController;
 	private bool sideA;
-	private GameObject centerPiece; //to rotate
 
 	// Use this for initialization
 	void Start () {
@@ -30,9 +29,6 @@ public class MusicBall : MonoBehaviour {
 		if (!onSideA) {
 			GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load (musicNote);
 			GetComponent<AudioSource> ().Play ();
-			centerPiece = GameObject.Find ("Puddle_Smooth");
-		} else {
-			centerPiece = GameObject.Find ("Wheel_Roulette");
 		}
 
 		//give this thing a force
@@ -53,17 +49,6 @@ public class MusicBall : MonoBehaviour {
 				GetComponent<AudioSource> ().Play ();
 			}
 		} else if (col.gameObject.name == "TableTrigger") {
-
-			Debug.Log("Trigger");
-			//rotate the center piece
-			Quaternion start = centerPiece.transform.rotation;
-			centerPiece.transform.RotateAround(centerPiece.transform.position,new Vector3(0,1,0),45);
-			Quaternion end = centerPiece.transform.rotation;
-			centerPiece.transform.rotation = start;
-			centerPiece.transform.rotation = 
-				Quaternion.Lerp (start, end, Time.deltaTime);
-
-			//trigger
 			ballController.TriggerTableFlip(gameObject);
 		}
     }

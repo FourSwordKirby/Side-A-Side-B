@@ -17,6 +17,11 @@ public class BallController : MonoBehaviour {
 	private GameObject roulette;
 	private GameObject flower;
 
+	private bool rotating;
+	private float rotation;
+	private GameObject rouletteCenter;
+	private GameObject flowerCenter;
+
     // Use this for initialization
 	void Start () {
 		soundsA = new string[4];
@@ -38,6 +43,9 @@ public class BallController : MonoBehaviour {
 
 		roulette = GameObject.Find ("Roulette_Center");
 		flower = GameObject.Find ("Trumpet");
+
+		flowerCenter = GameObject.Find ("Puddle_Smooth");
+		rouletteCenter = GameObject.Find ("Wheel_Roulette");
 
 		tableTrigger = 0;
     }
@@ -83,8 +91,27 @@ public class BallController : MonoBehaviour {
 			}
 		}
 
+		if (rotating) {
+			if (table.IsOnSideA()) {
+				rouletteCenter.transform.RotateAround(rouletteCenter.transform.position,
+				                                      new Vector3(0,1,0), 4);
+				rotation += 4f;
+			} else {
+				flowerCenter.transform.RotateAround(flowerCenter.transform.position,
+				                                    new Vector3(0,1,0), 4);
+				rotation += 4f;
+			}
+
+			if (rotation >= 180) {
+				rotation = 0;
+				rotating = false;
+			}
+		}
+
 		if (tableTrigger >= 6) {
 			tableTrigger = 0;
+			rotating = false;
+			rotation = 0;
 			table.flipTable();
 		}
 	}
@@ -93,9 +120,11 @@ public class BallController : MonoBehaviour {
 		pinballs.Remove (ball);
 		Destroy (ball);
 	}
-
+	
 	public void TriggerTableFlip(GameObject ball) {
 		++tableTrigger;
+		rotating = true;
+		rotation = 0;
 		RemoveBall (ball);
 	}
 
