@@ -8,6 +8,9 @@ public class Music_Controller : MonoBehaviour {
 	int instrumentCount = 0; // Will be modifed on start.
 	int keyCount = 128;
 
+	private AudioSource drum;
+	private AudioSource pentatonicBG;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -37,6 +40,11 @@ public class Music_Controller : MonoBehaviour {
 		{
 			instruments[i].volume = 0;
 		}
+
+		drum = GameObject.Find ("Drum").GetComponent<AudioSource> ();
+		pentatonicBG = GameObject.Find ("PentatonicBG").GetComponent<AudioSource> ();
+
+		StartPlaying ();
 	}
 	
 	// Update is called once per frame
@@ -77,11 +85,13 @@ public class Music_Controller : MonoBehaviour {
 	}
 
 	public void StartPlaying() {
-		GameObject.Find ("Drum").GetComponent<AudioSource> ().volume = 1.0f;
+		drum.volume = 1.0f;
+		pentatonicBG.volume = 0.0f;
 	}
 
 	public void StopPlaying() {
-		GameObject.Find ("Drum").GetComponent<AudioSource> ().volume = 0f;
+		drum.volume = 0f;
+		pentatonicBG.volume = 0.14f;
 		foreach (AudioSource source in instruments) {
 			source.volume = 0f;
 		}

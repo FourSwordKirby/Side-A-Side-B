@@ -70,7 +70,6 @@ public class Table : MonoBehaviour {
                     flipper.Reinitialize();
                 }
                 this.flipping = false;
-				musicController.StartPlaying();
             }
         }
         else
@@ -110,7 +109,10 @@ public class Table : MonoBehaviour {
         if (!flipping)
         {
 			ballController.ClearBalls();
-			musicController.StopPlaying();
+			if (onSideA) 
+				musicController.StopPlaying();
+			else 
+				musicController.StartPlaying();
             Debug.Log("here?");
             foreach (FlipperController flipper in GameObject.FindObjectsOfType<FlipperController>())
             {
