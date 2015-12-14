@@ -38,12 +38,12 @@ public class DarknessScript : MonoBehaviour {
         }
 	}
 
-    void turnDark()
+    public void turnDark()
     {
         isDark = true;
     }
 
-    void turnBright()
+    public void turnBright()
     {
         isDark = false;
     }

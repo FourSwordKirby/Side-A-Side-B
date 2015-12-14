@@ -16,6 +16,8 @@ public class Table : MonoBehaviour {
 	private BallController ballController;
 	private Music_Controller musicController;
 
+	private DarknessScript darkness;
+
 	// Use this for initialization
 	void Start () {
         onSideA = true;
@@ -23,6 +25,7 @@ public class Table : MonoBehaviour {
 
 		ballController = GameObject.FindObjectOfType<BallController>();
 		musicController = GameObject.FindObjectOfType<Music_Controller> ();
+		darkness = GameObject.FindObjectOfType<DarknessScript> ();
 
         sideAPosition = Vector3.zero;
         sideBPosition = new Vector3(0, -12.4f, 0);
@@ -109,10 +112,13 @@ public class Table : MonoBehaviour {
         if (!flipping)
         {
 			ballController.ClearBalls();
-			if (onSideA) 
+			if (onSideA) {
+				darkness.turnDark();
 				musicController.StopPlaying();
-			else 
+			} else {
+				darkness.turnBright();
 				musicController.StartPlaying();
+			}
             Debug.Log("here?");
             foreach (FlipperController flipper in GameObject.FindObjectsOfType<FlipperController>())
             {
