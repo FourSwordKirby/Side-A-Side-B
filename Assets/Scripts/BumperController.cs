@@ -11,6 +11,7 @@ public class BumperController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         bumperLight = this.gameObject.GetComponentInChildren<Light>();
+		colorList = new List<Color> ();
         colorList.Add(Color.red);
         colorList.Add(Color.white);
         colorList.Add(Color.blue);
