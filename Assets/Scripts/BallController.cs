@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using MidiJack;
 
 public class BallController : MonoBehaviour {
+
+	private int keyCount = 128;
+	private long lastPressed;
 
 	public string[] soundsA; //pond
 	public string[] soundsB; //casino
@@ -54,17 +58,53 @@ public class BallController : MonoBehaviour {
 
 		if (!table.IsFlipping ()) {
 			// FOR USE WITH MIDI INPUT. Switch with keyboard input if necessary.
-			/*
 			for (int key = 0; key < keyCount; key++)
 			{
-				if (MidiMaster.GetKey(key) > 0)
+				if (MidiMaster.GetKey(key) > 0 && System.DateTime.Now.Ticks - lastPressed > 2000000)
 				{
-					int i = key % instrumentCount;
-					AudioSource instrument = instruments[i];
-					increaseVolume (instrument);
+					int note;
+
+					lastPressed = System.DateTime.Now.Ticks;
+
+					//gets the note
+					if (table.IsOnSideA()) {
+						note = key % 3;
+					} else {
+						switch(key % 12) {
+							case 3:
+								note = 1;
+								break;
+							case 5:
+								note = 2;
+								break;
+							case 8:
+								note = 3;
+								break;
+							case 10:
+								note = 4;
+								break;
+							default:
+								note = Random.Range (0,1) == 0 ? 0 : 5;
+								break;
+						}
+					}
+					GameObject newball = Instantiate(pinballPrefab);
+					MusicBall musicball = newball.GetComponent<MusicBall>();
+					/* Pond */
+					if (table.IsOnSideA()) { 
+						musicball.Initialize(true, null, note);
+						newball.transform.position = new Vector3(roulette.transform.position.x, roulette.transform.position.y + 4, roulette.transform.position.z);
+						newball.GetComponent<MeshRenderer>().material.SetTexture(note, textureA[note]);
+					}
+					/* Casino */
+					else {
+						musicball.Initialize(false, soundsB[note], 0);
+						newball.transform.position = new Vector3(flower.transform.position.x, flower.transform.position.y + 4, flower.transform.position.z);
+						newball.GetComponent<MeshRenderer>().material.SetTexture(note, textureB[note]);
+					}
+					pinballs.Add(newball);
 				}
 			}
-			*/
 			
 			// FOR USE WITH KEYBOARD INPUT. Switch with MIDI input if necessary.
 			string keyPressed = Input.inputString;
