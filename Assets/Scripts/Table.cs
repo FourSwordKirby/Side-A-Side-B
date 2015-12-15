@@ -74,6 +74,11 @@ public class Table : MonoBehaviour {
                 }
                 this.flipping = false;
             }
+
+
+            //Change total lighting if flipping;
+            if(GameObject.Find("MainLight").GetComponentInChildren<Light>().intensity < 1.0F)
+                GameObject.Find("MainLight").GetComponentInChildren<Light>().intensity += 0.02F;
         }
         else
         {
@@ -96,6 +101,10 @@ public class Table : MonoBehaviour {
                 }
                 this.flipping = false;
             }
+
+            //Change total lighting if flipping;
+            if (GameObject.Find("MainLight").GetComponentInChildren<Light>().intensity > 0.2F)
+                GameObject.Find("MainLight").GetComponentInChildren<Light>().intensity -= 0.02F;
         }
     }
 

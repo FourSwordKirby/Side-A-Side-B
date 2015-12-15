@@ -9,17 +9,43 @@ public class MusicBall : MonoBehaviour {
 	private bool sideA;
 	private int sound; //instrument
 
+    private bool destroyBall;
+
 	// Use this for initialization
 	void Awake () {
+        destroyBall = false;
+
 		musicSource = GameObject.FindObjectOfType<Music_Controller>();
 		ballController = GameObject.FindObjectOfType<BallController> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (this.transform.position.y <= -10) {
-			ballController.RemoveBall(gameObject);
-		}
+        if (this.destroyBall)
+        {
+            this.GetComponent<Rigidbody>().mass = 0.0001f;
+            Color color = this.GetComponent<Renderer>().material.color;
+            if (color.a > 0)
+            {
+                color.a -= 0.005f;
+                this.GetComponent<Renderer>().material.color = color;
+                return;
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (this.GetComponent<Rigidbody>().velocity.y > 6.0f)
+        {
+            this.GetComponent<Rigidbody>().velocity -= new Vector3(0, this.GetComponent<Rigidbody>().velocity.y, 0);
+        }
+
+        if (this.transform.position.y <= -10)
+        {
+            ballController.RemoveBall(gameObject);
+        }
 	}
 
     public void Initialize(bool onSideA, string musicNote, int instrument) {
@@ -61,9 +87,27 @@ public class MusicBall : MonoBehaviour {
 				}
 				GetComponent<AudioSource> ().Play ();
 			}
-            this.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10))); 
-		} else if (col.gameObject.name == "TableTrigger") {
+
+            //give this thing a force
+            int xmod;
+            int zmod;
+            if (Random.Range(0, 2) == 0)
+                xmod = 1;
+            else
+                xmod = -1;
+
+            if (Random.Range(0, 2) == 0)
+                zmod = 1;
+            else
+                zmod = -1;
+            gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(xmod * Random.Range(3, 6), 3, zmod * Random.Range(3, 6)));
+        } else if (col.gameObject.name == "TableTrigger") {
 			ballController.TriggerTableFlip(gameObject);
 		}
+    }
+
+    public void destroy()
+    {
+        destroyBall = true;
     }
 }

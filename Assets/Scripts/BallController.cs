@@ -119,7 +119,7 @@ public class BallController : MonoBehaviour {
 
 	public void RemoveBall(GameObject ball) {
 		pinballs.Remove (ball);
-		Destroy (ball);
+        ball.GetComponent<MusicBall>().destroy();
 	}
 	
 	public void TriggerTableFlip(GameObject ball) {
