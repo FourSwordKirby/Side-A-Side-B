@@ -10,7 +10,7 @@ public class MusicBall : MonoBehaviour {
 	private int sound; //instrument
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		musicSource = GameObject.FindObjectOfType<Music_Controller>();
 		ballController = GameObject.FindObjectOfType<BallController> ();
 	}
@@ -23,7 +23,6 @@ public class MusicBall : MonoBehaviour {
 	}
 
     public void Initialize(bool onSideA, string musicNote, int instrument) {
-		sideA = onSideA;
 		note = musicNote;
 
 		//only balls on side B need to play their own sound
@@ -32,11 +31,23 @@ public class MusicBall : MonoBehaviour {
 			GetComponent<AudioSource> ().Play ();
 		} else {
 			sound = instrument;
+            musicSource.increaseVolume(musicSource.instruments[sound]);
 		}
 
 		//give this thing a force
-		gameObject.GetComponent<Rigidbody> ().AddForce (new Vector3 (Random.Range (-4,4), 2, Random.Range (-4,4)));
+        int xmod;
+        int zmod;
+        if (Random.Range(0, 2) == 0)
+            xmod = 1;
+        else
+            xmod = -1;
 
+        if (Random.Range(0, 2) == 0)
+            zmod = 1;
+        else
+            zmod = -1;
+
+    		gameObject.GetComponent<Rigidbody> ().AddForce (new Vector3 (xmod * Random.Range (2,4), 3, zmod * Random.Range (2,4)));
     }
 
     void OnCollisionEnter(Collision col)
@@ -44,13 +55,13 @@ public class MusicBall : MonoBehaviour {
         if (col.gameObject.name == "Pinball" || col.gameObject.name == "Bumper" || col.gameObject.name.StartsWith("Railing")) {
 			if (sideA) {
 				musicSource.increaseVolume (musicSource.instruments [sound]);
-				this.gameObject.GetComponent<Rigidbody> ().AddForce (new Vector3 (Random.Range (-10, 10), 0, Random.Range (-10, 10))); 
 			} else {
 				if (GetComponent<AudioSource> ().isPlaying) {
 					GetComponent<AudioSource> ().Stop ();
 				}
 				GetComponent<AudioSource> ().Play ();
 			}
+            this.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10))); 
 		} else if (col.gameObject.name == "TableTrigger") {
 			ballController.TriggerTableFlip(gameObject);
 		}

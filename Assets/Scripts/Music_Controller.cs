@@ -77,7 +77,7 @@ public class Music_Controller : MonoBehaviour {
 //		Debug.Log ("Changed " + audio + " to " + newVolume);
 	}
 	
-	float increaseAmount = 0.08F;
+	float increaseAmount = 0.15F;
 	public void increaseVolume(AudioSource audio)
 	{
 		changeVolume (audio, increaseAmount);
